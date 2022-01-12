@@ -1,60 +1,78 @@
-import sys
-import random
-from PyQt5.QtWidgets import QApplication, QMainWindow
-from PyQt5.QtGui import QPainter, QColor
-from PyQt5 import QtCore, QtGui, QtWidgets
+print('''[Verse 1]
+We're no strangers to love
+You know the rules and so do I
+A full commitment's what I'm thinking of
+You wouldn't get this from any other guy
 
+[Pre-Chorus]
+I just wanna tell you how I'm feeling
+Gotta make you understand
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(800, 600)
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
-        self.centralwidget.setObjectName("centralwidget")
-        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(370, 440, 75, 23))
-        self.pushButton.setObjectName("pushButton")
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 21))
-        self.menubar.setObjectName("menubar")
-        MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
+[Chorus]
+Never gonna give you up
+Never gonna let you down
+Never gonna run around and desert you
+Never gonna make you cry
+Never gonna say goodbye
+Never gonna tell a lie and hurt you
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+[Verse 2]
+We've known each other for so long
+Your heart's been aching, but you're too shy to say it
+Inside, we both know what's been going on
+We know the game, and we're gonna play it
+[Pre-Chorus]
+And if you ask me how I'm feeling
+Don't tell me you're too blind to see
 
-    def retranslateUi(self, MainWindow):
-        _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.pushButton.setText(_translate("MainWindow", "PushButton"))
+[Chorus]
+Never gonna give you up
+Never gonna let you down
+Never gonna run around and desert you
+Never gonna make you cry
+Never gonna say goodbye
+Never gonna tell a lie and hurt you
+Never gonna give you up
+Never gonna let you down
+Never gonna run around and desert you
+Never gonna make you cry
+Never gonna say goodbye
+Never gonna tell a lie and hurt you
 
+[Post-Chorus]
+Ooh (Give you up)
+Ooh-ooh (Give you up)
+Ooh-ooh
+Never gonna give, never gonna give (Give you up)
+Ooh-ooh
+Never gonna give, never gonna give (Give you up)
+[Bridge]
+We've known each other for so long
+Your heart's been aching, but you're too shy to say it
+Inside, we both know what's been going on
+We know the game, and we're gonna play it
 
-class MyWidget(QMainWindow, Ui_MainWindow):
-    def __init__(self):
-        super().__init__()
-        self.setupUi(self)
-        self.do_paint = False
-        self.pushButton.clicked.connect(self.paint)
+[Pre-Chorus]
+I just wanna tell you how I'm feeling
+Gotta make you understand
 
-    def paintEvent(self, e):
-        k = random.randint(1, 439)
-        m = k
-        qp = QPainter()
-        qp.begin(self)
-        qp.setBrush(QColor(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)))
-        qp.drawEllipse(random.randint(1, 439), random.randint(1, 369), k, m)
-        qp.end()
-
-    def paint(self):
-        self.do_paint = not self.do_paint
-        self.repaint()
-
-
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    ex = MyWidget()
-    ex.show()
-    sys.exit(app.exec())
+[Chorus]
+Never gonna give you up
+Never gonna let you down
+Never gonna run around and desert you
+Never gonna make you cry
+Never gonna say goodbye
+Never gonna tell a lie and hurt you
+Never gonna give you up
+Never gonna let you down
+Never gonna run around and desert you
+Never gonna make you cry
+Never gonna say goodbye
+Never gonna tell a lie and hurt you
+Never gonna give you up
+Never gonna let you down
+Never gonna run around and desert you
+Never gonna make you cry
+Never gonna say goodbye
+Never gonna tell a lie and hurt you
+''')
